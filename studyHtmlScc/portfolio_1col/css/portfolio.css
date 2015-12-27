@@ -1,0 +1,95 @@
+body {
+   background-color: #f3f3f3;
+   color: #7f8c8c;
+   font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.placeholder {
+    height: 270px;
+/*    border: 1px solid black;*/
+
+}
+
+.phl-im{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.phl-im-background{
+    color: #ececec;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+/*    border: 7px solid #ececec;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: inset  0 0 10px 11px white;*/
+}
+
+
+.btn-redefinition,.btn-color-blue {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #98a3a3;
+    color: white;
+    box-shadow: 0 3px #7f8c8c;
+    border-radius: 3px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.btn-redefinition:hover {
+    background-color: #62a29e;
+    box-shadow: 0 3px #528b86;
+}
+
+.row-vertical-indent {
+     margin-top: 20px;
+ }
+
+.placeholder h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.btn-color-blue{
+    background-color: #76caca;
+    box-shadow: 0 3px #62bdbd;
+}
+
+.placeholder .btn-big{
+    height: 50px;
+    width: 200px;
+}
+
+.placeholder .btn-small{
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.placeholder .btn-color-blue:hover {
+    background-color: #e8645a;
+    box-shadow: 0 3px #e2534b;
+}
+
+.col-border {
+    border: 1px solid black;
+}
+
+.btn-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.btn-link {
+    margin-top: -5px;
+    font-size: 14px;
+    font-weight: 400
+}

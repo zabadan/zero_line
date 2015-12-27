@@ -1,0 +1,30 @@
+.container {
+  min-width: 960px;
+  margin: 0 auto; }
+
+.header, header, footer {
+  min-height: 200px;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #fff; }
+
+.btn {
+  display: inline-block; }
+
+header {
+  margin-bottom: 20px; }
+
+.site-header {
+  widows: 100%;
+  height: 300px; }
+  .site-header_logo {
+    float: left;
+    margin: 10px 0; }
+  .site-header__menu {
+    position: absolute; }
+    .site-header__menu--item {
+      float: left; }
+
+footer {
+  margin-top: 40px; }

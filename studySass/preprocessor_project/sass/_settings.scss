@@ -1,0 +1,22 @@
+$global_background_color: #f3f3f3;
+$global_font_color: #7f8c8c;
+
+$main_background_color: #6ab3ac;
+$alternate_background_color: #ececec;
+$second_background_color: #e8645a;
+
+$shedow_main_background_color: #62bdbd;
+$shedow_alternate_background_color: #e5e6e6;
+$shedow_background_color: #e2534b;
+
+/*-------------------------------------------*/
+$cell_margin_right: 30px;
+$cell_wight: 70px;
+
+
+/*-------------------------------------------*/
+
+@mixin no_decoration {
+    text-decoration: none;
+    color: #fff
+}

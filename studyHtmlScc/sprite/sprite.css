@@ -1,0 +1,248 @@
+.big, .med, .small {
+    display: block;
+    margin: 10px auto;
+}
+[class*='icon'] {
+    width: 60px;
+    height: 58px;
+    margin: 0 5px;
+    display: inline-block;
+    background: #b20000 url("img/sprite2.png") center 0 no-repeat;
+}
+
+.icon_quotes_double {
+    background-position-y: 16px;
+}
+
+.icon_single_double {
+    background-position-y: -275px;
+}
+
+.icon_like {
+     background-position-y: -562px;
+ }
+
+.icon_flag {
+    background-position-y: -853px;
+}
+
+.icon_tube {
+    background-position-y: -1142px;
+}
+
+.icon_key {
+    background-position-y: -1432px;
+}
+
+.icon_plus {
+    background-position-y: -1723px;
+}
+
+.icon_minus {
+    background-position-y: -2012px;
+}
+
+.icon_link {
+    background-position-y: -2301px;
+}
+
+.icon_visit {
+    background-position-y: -2591px;
+}
+
+.icon_arrow {
+    background-position-y: -2879px;
+}
+
+.icon_cross {
+    background-position-y: -3170px;
+}
+
+.icon_reveal {
+    background-position-y: -3460px;
+}
+
+.icon_tick {
+    background-position-y: -3751px;
+}
+
+.icon_rss {
+    background-position-y: -4041px;
+}
+
+.icon_facebook {
+    background-position-y: -4330px;
+}
+
+.icon_twetter {
+    background-position-y: -4620px;
+}
+
+.icon_g-plus {
+    background-position-y: -4908px;
+}
+/*------------------------------------------*/
+.med [class*='icon'] {
+    background-size: 70%
+}
+
+.med .icon_quotes_double {
+    background-position-y: 21px;
+}
+
+.med .icon_single_double {
+    background-position-y: -189px;
+}
+
+.med .icon_like {
+    background-position-y: -400px;
+}
+
+.med .icon_flag {
+    background-position-y: -607px;
+}
+
+.med .icon_tube {
+    background-position-y: -815px;
+}
+
+.med .icon_key {
+    background-position-y: -1027px;
+}
+
+.med .icon_plus {
+    background-position-y: -1239px;
+}
+
+.med .icon_minus {
+    background-position-y: -1448px;
+}
+
+.med .icon_link {
+    background-position-y: -1659px;
+}
+
+.med .icon_visit {
+    background-position-y: -1869px;
+}
+
+.med .icon_arrow {
+    background-position-y: -2078px;
+}
+
+.med .icon_cross {
+    background-position-y: -2288px;
+}
+
+.med .icon_reveal {
+    background-position-y: -2497px;
+}
+
+.med .icon_tick {
+    background-position-y: -2707px;
+}
+
+.med .icon_rss {
+    background-position-y: -2917px;
+}
+
+.med .icon_facebook {
+    background-position-y: -3128px;
+}
+
+.med .icon_twetter {
+    background-position-y: -3336px;
+}
+
+.med .icon_g-plus {
+    background-position-y: -3547px;
+}
+
+/*----------------------------------------*/
+
+.small [class*='icon'] {
+    background-size: 50%
+}
+
+.small .icon_quotes_double {
+    background-position-y: 24px;
+}
+
+.small .icon_single_double {
+    background-position-y: -126px;
+}
+
+.small .icon_like {
+    background-position-y: -277px;
+}
+
+.small .icon_flag {
+    background-position-y: -430px;
+}
+
+.small .icon_tube {
+    background-position-y: -577px;
+}
+
+.small .icon_key {
+    background-position-y: -725px;
+}
+
+.small .icon_plus {
+    background-position-y: -875px;
+}
+
+.small .icon_minus {
+    background-position-y: -1024px;
+}
+
+.small .icon_link {
+    background-position-y: -1174px;
+}
+
+.small .icon_visit {
+    background-position-y: -1324px;
+}
+
+.small .icon_arrow {
+    background-position-y: -1474px;
+}
+
+.small .icon_cross {
+    background-position-y: -1624px;
+}
+
+.small .icon_reveal {
+    background-position-y: -1773px;
+}
+
+.small .icon_tick {
+    background-position-y: -1924px;
+}
+
+.small .icon_rss {
+    background-position-y: -2074px;
+}
+
+.small .icon_facebook {
+    background-position-y: -2223px;
+}
+
+.small .icon_twetter {
+    background-position-y: -2374px;
+}
+
+.small .icon_g-plus {
+    background-position-y: -2523px;
+}
+
+/*-------------------------*/
+.gradient {
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(to bottom, red, blue);
+}
+
+svg {
+    border: 1px solid #fff;
+}

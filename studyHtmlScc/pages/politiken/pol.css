@@ -1,0 +1,161 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+}
+
+hr {
+    height: 2px;
+    width: 80%;
+    margin-left: 0;
+    margin-bottom: 10px;
+    color: #cc0000;
+    border: none; /* ”бираем границу дл€ браузера Firefox */
+    background-color: #cc0000; /* ÷вет линии дл€ браузера Firefox и Opera */
+}
+
+header{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 10px 0 20px;
+}
+
+header .subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.rubric, .data{
+    margin-right: 5px;
+    float: left;
+    font-size: 11px;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.data {
+    margin-left: 5px;
+    color: rgba(0,0,0, .8);
+}
+
+.headArticle {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    width: 70%;
+}
+
+.subTitleArticle {
+    font-size: 15px;
+}
+
+figcaption {
+    background-color: rgba(0,0,0, .8);
+}
+
+.imgTeaser {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.imgTeaser img{
+    width: 80%;
+}
+
+.imgTeaser figcaption {
+
+    font-weight: bold;
+    width: 75%;
+    display: block;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: rgba(0,0,0, .8);
+    line-height: 1.3em;
+}
+
+p {
+    width: 80%;
+    line-height: 1.3em;
+    padding: 5px 0 3px;
+}
+
+h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    line-height: .5em;
+}
+
+.autor {
+    float: left;
+    padding: 10px 0 5px;
+}
+
+.autor img{
+    width: 27px;
+    height: 35px;
+}
+
+.autor>.name, .profession {
+    font-weight: bold;
+    float: left;
+    padding-left: 10px;
+    margin: 6px 1px 0;
+    line-height: 1.9em;
+}
+
+.autor> .profession{
+    font-weight: 100;
+    margin-top: 0;
+    line-height: 0;
+}
+
+footer {
+    padding: 40px 0 20px;
+    font-size: 10px;
+    font-family: sans-serif;
+    word-spacing: 1em;
+}
+
+#nav {
+    float: left;
+    padding: 10px 0 10px 0;
+}
+
+.subtitle  a {
+    padding: 5px 15px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    border-left: 1px solid #2dc8c1;
+}
+
+.subtitle a:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.subtitle a[href*='google.com.ua'] {
+    text-shadow: 1px 1px 3px black;
+}
+
+.subtitle a[href*='pdf'] {
+    text-shadow: 1px 1px 3px blue;
+}
+
+.subtitle a:hover {
+    color: #cc0000;
+}

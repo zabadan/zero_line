@@ -1,0 +1,61 @@
+@mixin make-btn($padding, $btn_color: $main-primery-color) {
+	padding-top: $padding;
+	padding-bottom: $padding;
+	padding-left: $padding*2.5;
+	padding-right: $padding*2.5;
+	border-radius: 5px;
+
+
+	@if($padding<=40) {
+		$btn_color: #EEDFAC;
+		font-size: $padding/2;
+	}
+	@if($padding<=20) {
+		$btn_color: #24AADD;
+		font-size: $padding;
+	}
+	@if($padding<=10) {
+		$btn_color: #D23E30;
+		font-size: $padding;
+	}
+	border: 1px solid  darken($btn_color, 20%);
+	background-color: $btn_color;
+
+	&:hover {
+		background-color: darken($btn_color, 20%);
+		box-shadow: 0 0 5px darken($btn_color, 70%);
+	}
+}
+
+.container {
+	min-width: $min-width;
+	margin: 0 auto;
+}
+
+.header {
+	min-height: 20px;
+	width: 100%;
+	padding: 10px;
+	color: $header-color;
+	background-color: $main-primery-color;
+}
+
+.btn-small {
+	@include make-btn(10px);
+}
+
+.btn-medium {
+	@include make-btn(20px);
+}
+
+.btn-big {
+	@include make-btn(40px);
+}
+
+.btn-25 {
+	@include make-btn(25px);
+}
+
+.btn-15 {
+	@include make-btn(15px);
+}

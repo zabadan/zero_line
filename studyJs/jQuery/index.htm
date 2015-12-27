@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="stylesheets/app.css">
+</head>
+<body>
+<!-- begin row -->
+<div class="row">
+	<!-- begin leftMessage -->
+	<div class="leftMessage fl_left">
+		<form class="textarea-form ">
+			<label for="message"><h3>Message</h3></label><br>
+			<textarea name="" id="message" data-max="10" data-min="1" cols="30" rows="10"></textarea><br>
+			<!-- begin mytext -->
+			<div class="mytext"></div>
+			<!-- end mytext -->
+			<button type="button" class="send-btn">Send</button>
+		</form>
+	</div>
+	<!-- end leftMessage -->
+	
+	<!-- begin rightMessage -->
+	<div class="rightMessage">
+		<h3>Your message:</h3>
+		<hr>
+		<div class="yourMessage"></div>
+		<hr>
+		<div class="numCharacter"></div>
+	</div>
+	<!-- end rightMessage -->
+</div>
+<!-- end row -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+/*		debugger;*/
+
+		var myMessage = $('#message');
+		var maxLimit = myMessage.data('max');
+		console.log("maxLimit = "  + maxLimit);
+
+		$('.send-btn').on('click', function() {
+			console.log(myMessage.val());
+			var mytextVal = myMessage.val();
+			if (myMessage.val()<='') {
+				$('.mytext').css('display', 'block');
+		  		$('.mytext').html('немає тексту!');
+		  		$('.mytext').css('color', 'red');
+		  		$('.yourMessage').html("");
+		  		$('.numCharacter').html("");
+			} else {
+				$('.mytext').css('display', 'none');
+				if (myMessage.val().length <= maxLimit) {
+					$('.yourMessage').html(myMessage.val());
+					$('.numCharacter').html('У вашому меседжі ' + myMessage.val().length + ' символів');
+					$('.numCharacter').css('color', 'black');
+				} else {
+					$('.yourMessage').html(myMessage.val().substring(0,maxLimit-3) + '...');
+					$('.numCharacter').html('У вашому меседжі забагато символів. Ми залишили тіки '+ maxLimit + ', решту — відрізали.');
+					$('.numCharacter').css('color', 'red');
+				}
+			}
+
+		})
+	</script>
+
+	<!-- српава поставить блок превью, выводить в него текст, если в тексте более 100 символов лишние не выводить а поставить "...", если нет текста - внизу выводить текст "нет текста" -->
+</body>
+</html>

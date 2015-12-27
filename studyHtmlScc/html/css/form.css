@@ -1,0 +1,41 @@
+textarea, select, input {
+    width: 255px; /* Ширина поля в процентах */
+    height: 20px; /* Высота поля в пикселах */
+    resize: none; /* Запрещаем изменять размер */
+    margin: 5px;
+}
+
+select {
+    height: 25px;
+    width: 260px;
+}
+
+.radio {
+    width: 60px;
+    margin-right: -15px;
+    height: 14px;
+
+}
+
+.textform {
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: cornflowerblue;
+}
+
+.buttonForm, button {
+    width: 120px;
+    height: 25px;
+    font-weight: bold;
+}
+
+button {
+    background-color: lightgreen;
+}
+
+h2 {
+    text-align: center;
+}

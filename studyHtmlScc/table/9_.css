@@ -1,0 +1,60 @@
+ol {
+    list-style-type: square;
+}
+
+ul {
+/*    list-style-image: url("im/like_icon.png") ;*/
+    list-style: circle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+    border: 2px solid;
+}
+
+th {
+    background: darkblue;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+td {
+    border-left: 1px solid;
+    height: 30px;
+}
+
+.zebra tr:nth-child(-2n+5) {
+     background: #eee;
+
+ }
+
+td:hover {
+    background: #ff6459;
+}
+
+.container {
+    background: #eee;
+    height: 50px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.inside {
+    background: #D31141;
+    height: 70px;
+    width: 200px;
+    float: left;
+    margin-left: 10px;
+    border: 1px solid black;
+
+}
+
+.my_outline {
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid #ff6459;
+}

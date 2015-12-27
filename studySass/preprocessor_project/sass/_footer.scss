@@ -1,0 +1,133 @@
+footer {
+    margin-top: 20px;
+    padding-top: 50px;
+    background: #76c7c0 url("../im/ruler_bottom.png") repeat-x top;
+    color: #fff;
+    a {
+        @include no_decoration;
+    }
+    p {
+        font-size: 13px;
+    }
+        .footer-menu li {
+        padding-top: 2px;
+    }
+
+    h6 {
+        color: #4b7e79;
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .footer-menu li:first-child {
+        padding-top: 17px;
+    }
+
+    .footer-menu li:before {
+        content: '>   ';
+    }
+    .footer-menu li a:hover {
+        color: $shedow_background_color;
+    }
+
+    .footer-blog-title {
+        @include no_decoration;
+        font-size: 20px;
+        line-height: 80px;
+        font-style: italic;
+        padding-top: 5px;
+    }
+
+    .footer-blog-title strong {
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .footer-blog-row {
+        padding-bottom: 10px;
+    }
+
+    .footer-blog-row:before {
+        background: #5e9f9a url("../im/icon_slideshow.png") center center no-repeat;
+        background-size: 40%;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        float: left;
+        border-radius: 3px;
+        margin-right: 18px;
+    }
+
+    .footer-blog-data {
+        margin-top: 5px;
+        color: #62a49e;
+    }
+}
+
+.footer-contact-name, .footer-contact-name-value {
+    display: inline-block;
+    font-size: 13px;
+    min-width: 50px;
+    padding: 5px 10px 0 0;
+}
+
+.footer-contact-name-value {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer-menu-block {
+    padding-top: 30px;
+}
+
+.footer-copy {
+    background-color: $main_background_color;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.footer-copy-aligne {
+    line-height: 4.2em;
+}
+
+/*-------------icon-------------*/
+
+[class*='icon'] {
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    background: url("../im/sprite2.png") center 0 no-repeat;
+}
+
+.icon_rss {
+    background-position-y: -4041px;
+}
+
+.icon_facebook {
+    background-position-y: -4330px;
+}
+
+.icon_twetter {
+    background-position-y: -4620px;
+}
+
+.icon_g-plus {
+    background-position-y: -4908px;
+}
+
+
+.icon_link {
+    width: 40px;
+    background-position-y: -2309px;
+    background-color: #76b7b1;
+    border-radius: 5px;
+    &:hover {
+        background-color: $shedow_background_color;
+    }
+}
+
+.icon_visit {
+    @extend .icon_link;
+    background-position-y: -2599px;
+}

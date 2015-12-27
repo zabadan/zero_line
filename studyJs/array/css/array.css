@@ -1,0 +1,20 @@
+.customInput {
+	background-color: #fcef6c;
+	color: black;
+	width: 140px;
+}
+
+.printTableStudents {
+	width: 650px;
+	border-width: 1px;
+	border-color: black;
+	border-spacing: 2px;
+	& th {
+		wont-wegth: bold;
+		background-color: grey;
+	}
+}
+
+.tableStudents {
+	display: none;
+}

@@ -1,0 +1,49 @@
+[class*='my-cell-'] {
+    padding: 1em;
+    margin-right: 30px;
+    background-color: #ff6459;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+[class*='my-cell-']:last-of-type {
+    margin-right: 0;
+}
+
+.my-cell-1 {
+    /*min-width: 130px;*/
+    flex-grow: 1;
+}
+.my-cell-2 {
+  /*  width: 270px;*/
+    flex-grow: 2;
+}
+
+.my-cell-3 {
+   /* width: 370px;*/
+    flex-grow: 3;
+}
+
+.my-cell-4{
+    /*width: 570px;*/
+    flex-grow: 4;
+}
+
+.my-cell-5 {
+   /* width: 870px;*/
+    flex-grow: 5;
+}
+
+.my-cell-6 {
+    /*width: 1170px;*/
+    flex-grow: 6;
+}
+
+.my-container {
+    margin: 0 auto;
+    max-width: 1170px;
+    display: flex;
+    background: #eee;
+    flex-direction: row;
+}

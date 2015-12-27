@@ -1,0 +1,39 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fl_left {
+  float: left;
+}
+
+.row {
+  width: 620px;
+  margin: 0 auto;
+}
+
+.leftMessage, .rightMessage {
+  width: 40%;
+  background-color: white;
+  margin: 10px 20px 10px 0;
+  display: inline-block;
+}
+
+.rightMessage {
+  background-color: #daf1fc;
+  margin: 10px 0 0 0;
+  padding: 0 20px;
+}
+
+hr {
+  border-top: 1px dotted;
+  margin: 10px 0;
+}
+
+.yourMessage {
+  margin-top: 10px;
+  word-wrap: break-word;
+}

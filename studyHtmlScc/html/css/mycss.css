@@ -1,0 +1,45 @@
+.header {
+    marnin-right: 10px;
+    margin-left: 10px;
+    width: 940px;
+    height: 50px;
+}
+
+.content{
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 2px dotted white;
+    margin: auto;
+}
+
+.pic{
+    float:left;
+    margin: 10px 80px 20px 30px;
+
+}
+
+.txt1 {
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+.txt2 {
+     font-family: sans-serif;
+     padding: 10px;
+     margin-bottom: 110px;
+ }
+
+.txt3 {
+    font-family: sans-serif;
+    padding: 11px;
+    text-decoration: underline;
+}
+
+.logo {
+    width: 40%;
+    margin: -40px;
+    vertical-align: middle;
+}

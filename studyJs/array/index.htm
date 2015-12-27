@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+	<link rel="stylesheet" href="css/array.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/students.js"></script>
+
+</head>
+<body>
+<!-- 	begin array -->
+	<div class="array">
+		<form class="textarea-form ">
+			<input type="text" class="customInput" name="nameStudent" placeholder="Name student">
+			<input type="date" class="customInput" name="dateStudent" placeholder="date">
+			<input type="number" class="customInput" name="ageStudent" min="15" max="99" step="1" placeholder="Age students">
+			<input type="number" class="customInput" name="ratingStudent" min="0" max="99" step="1" placeholder="Rating students">
+			<button type="button" class="btnAdd">Add</button>
+			<button type="button" class="btnRefrech">Refrech</button>
+		</form>
+	</div>
+<!-- 	end array -->
+
+<!-- begin tableStudents -->
+<div class="tableStudents">
+	<table class="printTableStudents" border="1">
+		<tr>
+			<th>№</th>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Age</th>
+			<th>Rating</th>
+			<th>Action</th>
+		</tr>
+		
+	</table>
+</div>
+<!-- end tableStudents -->
+	<script>
+		/*printArray();*/
+		printStudents();
+	</script>
+</body>
+</html>

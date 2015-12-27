@@ -1,0 +1,49 @@
+.menu-tab-big > div, .menu-tab-big > input {
+    display: none;
+}
+
+.menu-tab-big label{
+    margin-right: 10px;
+    width: 130px;
+    height: 50px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #62b9b0;
+    color: #fff;
+    display: inline-block;
+}
+
+.menu-tab-big label:last-child {
+    float: none;
+    background-color: black;
+}
+
+.menu-tab-big label:hover {
+    background: #e2534b;
+    cursor: pointer;
+}
+
+.menu-tab-big input[type="radio"]:checked + label {
+    border-bottom: 2px solid #fff; }
+
+.menu-tab-big > input:nth-of-type(1):checked ~ .menu-tab-text:nth-of-type(1),
+.menu-tab-big > input:nth-of-type(2):checked ~ .menu-tab-text:nth-of-type(2),
+.menu-tab-big > input:nth-of-type(3):checked ~ .menu-tab-text:nth-of-type(3),
+.menu-tab-big > input:nth-of-type(4):checked ~ .menu-tab-text:nth-of-type(4)
+{
+    display: block;
+
+}
+
+.menu-tab-big > input:nth-of-type(1):checked ~ label:nth-of-type(1),
+.menu-tab-big > input:nth-of-type(2):checked ~ label:nth-of-type(2),
+.menu-tab-big > input:nth-of-type(3):checked ~ label:nth-of-type(3),
+.menu-tab-big > input:nth-of-type(4):checked ~ label:nth-of-type(4)
+{
+    padding: 5px;
+    background-color: #f8f8f8;
+}
+
+.menu-tab-text {
+    display: block;
+}
