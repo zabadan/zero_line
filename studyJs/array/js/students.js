@@ -8,7 +8,6 @@ function refresh() {
 	students.forEach(function(item, i) {
 		item.id = i+1;
 		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet" >Del</button><button type="button" class="editStudet" id = '+ item.id + '>Edit</button></td></tr>');
-		console.log('refresh: item.id = ' + item.id + '  item.name = ' + item.name);
 	});
 }
 
@@ -32,7 +31,6 @@ function printStudents () {
 		} else {
 			students.push({id: maxId++, name: nameStudent, date: dateStudent, age: ageStudent, rating: ratingStudent});
 			refresh();
-			//$('.printTableStudents').append('<tr><td>' + students.length +'</td><td>' + nameStudent +'</td><td>' + dateStudent + '</td><td>' + ageStudent + '</td><td>' + ratingStudent + '</td><td><button type="button" id = '+ students.length + ' class="delStudet" >Del</button><button type="button" class="editStudet" data-id = '+ students.length + '>Edit</button></td></tr>');
 			$('.tableStudents').css('display', 'block');
 		};
 		$('.customInput').val('');
@@ -65,7 +63,6 @@ function printStudents () {
 					alert('Fill in the form correctly!');
 					} else {
 						students.splice(tmpId, 1, {id: tmpId, name: nameStudent, date: dateStudent, age: ageStudent, rating: ratingStudent});
-						//students.push({id: event.target.id - 1, name: nameStudent, date: dateStudent, age: ageStudent, rating: ratingStudent});
 						console.log('event.target.id-1 = ' + tmpId);
 						console.log('current students = ' + students[tmpId].id, students[tmpId].name);
 						refresh();
@@ -102,7 +99,7 @@ function printStudents () {
 
 	    function compareByRating (a, b) {
 	    	/*console.log('a.rating = ' + a.rating + '. b.rating = ' + b.rating);*/
-	    	return a.rating - b.rating;
+	    	return  b.rating - a.rating;
 		}
 
 		sortSselect = $('select').val();
