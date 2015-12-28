@@ -83,8 +83,9 @@ function printStudents () {
  		}
 
 	    function compareByName (a, b) {
+	    	if (a.name > b.name) return 1;
+  			if (a.name < b.name) return -1;
 	    	/*console.log('a.name = ' + a.name + '. b.name = ' + b.name);*/
-	    	return a.name - b.name;
  		}
 
 	    function compareByDate (a, b) {
