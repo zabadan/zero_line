@@ -18,3 +18,23 @@
 .tableStudents {
 	display: none;
 }
+
+.winEdit {
+	display: none;
+	width: 600px;
+	background-color: rgba(255, 255, 255, .8);
+    border: 2px solid;
+    box-shadow: 0 0 5px #eee;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+}
+
+.close {
+    position: absolute;
+    top: -14px;
+    right: -40px;
+    cursor: pointer;
+}

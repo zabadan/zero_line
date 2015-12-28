@@ -35,9 +35,8 @@ function refresh() {
 	students.forEach(function(item, i) {
 		item.id = i+1;
 		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet" >Del</button><button type="button" class="editStudet" id = '+ item.id + '>Edit</button></td></tr>');
+		console.log('refresh: item.id = ' + item.id + '  item.name = ' + item.name);
 	});
-	console.log('students.length = ' + students.length + '  maxId = ' + maxId);
-
 }
 
 function printStudents () {
@@ -70,6 +69,32 @@ function printStudents () {
 		}
 	});
 	$('.printTableStudents').on('click', '.editStudet', function() {
-			alert('eidt is`t work now, sorry');
+			$('.winEdit').css('display', 'block');
+			$('input[name="editNameStudent"]').val(students[event.target.id-1].name);
+			$('input[name="editAgeStudent"]').val(students[event.target.id-1].age);
+			$('input[name="editRatingStudent"]').val(students[event.target.id-1].rating);
+			$('input[name="editDateStudent"]').val(students[event.target.id-1].date);
+			tmpId = event.target.id-1;
+			$('.btnConfirm').on('click', function() {
+				nameStudent = $('input[name="editNameStudent"]').val();
+				ratingStudent = $('input[name="editRatingStudent"]').val();
+				ageStudent = $('input[name="editAgeStudent"]').val();
+				dateStudent = $('input[name="editDateStudent"]').val();
+				if(nameStudent=="" || ageStudent=="" || ratingStudent=="") {
+					alert('Fill in the form correctly!');
+					} else {
+						students.splice(tmpId, 1, {id: tmpId, name: nameStudent, date: dateStudent, age: ageStudent, rating: ratingStudent});
+						//students.push({id: event.target.id - 1, name: nameStudent, date: dateStudent, age: ageStudent, rating: ratingStudent});
+						console.log('event.target.id-1 = ' + tmpId);
+						console.log('current students = ' + students[tmpId].id, students[tmpId].name);
+						refresh();
+						$('.winEdit').css('display', 'none');
+					};
+			});
+
+	});
+
+	$('.close').on('click', function() {
+			$('.winEdit').css('display', 'none');
 	});
 }
