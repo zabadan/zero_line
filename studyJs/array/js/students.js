@@ -1,30 +1,3 @@
-/*var rockBand = ['Metallika', ' AC/DC', 'OffSprings',' Nirvana'];
-
-function printArray() {
-	$('.array').html('old array = ' + rockBand + '<br>');
-	alert('length = ' + rockBand.length);
-	alert("delete " + rockBand[rockBand.length-1] + ' :\(');
-	rockBand.pop();
-	$('.array').html('new array = ' + rockBand + '<br>');
-	alert( rockBand.length);
-	rockBand.push("Accept");
-	alert("add " + rockBand[rockBand.length-1] + ' :\)');
-	alert(rockBand.length);
-	$('.array').html('new array = ' + rockBand + '<br>');
-
-	for (var i = 0; i < rockBand.length; i++) {
-	  alert( rockBand[i] );
-	}
-
-	rockBand.forEach(function(item) {
-		alert(i + ": " + item + " (массив: " + rockBand + ")" );
-	});
-
-};
-
-
-*/
-
 var tableCap = '<tr><th>№</th><th>Name</th><th>Date</th><th>Age</th><th>Rating</th><th>Action</th></tr>';
 var students = new Array();
 var maxId = students.length + 1;
@@ -36,6 +9,14 @@ function refresh() {
 		item.id = i+1;
 		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet" >Del</button><button type="button" class="editStudet" id = '+ item.id + '>Edit</button></td></tr>');
 		console.log('refresh: item.id = ' + item.id + '  item.name = ' + item.name);
+	});
+}
+
+function sortRefresh() {
+	$('table').html('');
+	$('table').html(tableCap);
+	students.forEach(function(item, i) {
+		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet" >Del</button><button type="button" class="editStudet" id = '+ item.id + '>Edit</button></td></tr>');
 	});
 }
 
@@ -96,5 +77,52 @@ function printStudents () {
 
 	$('.close').on('click', function() {
 			$('.winEdit').css('display', 'none');
+	});
+
+	$('.sort').on('change', function() {
+	    function compareById (a, b) {
+	    	/*console.log('a.id = ' + a.id + '. b.id = ' + b.id);*/
+	    	return a.id - b.id;
+ 		}
+
+	    function compareByName (a, b) {
+	    	/*console.log('a.name = ' + a.name + '. b.name = ' + b.name);*/
+	    	return a.name - b.name;
+ 		}
+
+	    function compareByDate (a, b) {
+	    	/*console.log('a.date = ' + a.date + '. b.date = ' + b.date);*/
+	    	return a.date - b.date;
+ 		}
+
+		function compareByAge (a, b) {
+	    	/*console.log('a.age = ' + a.age + '. b.age = ' + b.age);*/
+	    	return a.age - b.age;
+	 	}
+
+	    function compareByRating (a, b) {
+	    	/*console.log('a.rating = ' + a.rating + '. b.rating = ' + b.rating);*/
+	    	return a.rating - b.rating;
+		}
+
+		sortSselect = $('select').val();
+		switch(sortSselect){
+			case 'id':
+		 		students.sort(compareById);
+			    break;
+			case 'name':
+		 		students.sort(compareByName);
+			    break;
+			case 'date':
+			    students.sort(compareByDate);
+			    break;
+			case 'age':
+			    students.sort(compareByAge);
+			    break;
+			case 'rating':
+			    students.sort(compareByRating);
+			    break;
+		};
+		sortRefresh();
 	});
 }
