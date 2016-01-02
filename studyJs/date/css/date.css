@@ -1,0 +1,25 @@
+DIV {
+  height: 0;
+  border: 7px solid transparent; 
+  cursor: pointer;
+  }
+
+
+
+.my-span {
+  float: left;
+  display: inline;
+  margin: 5px 5px;
+}
+
+.arrow-right {
+  border-right-color: black;  
+  border-left: 0;
+  margin-top: 20px;
+  }
+
+.arrow-left {
+  border-left-color: black;  
+  border-right: 0;
+  margin-top: 20px;
+  }

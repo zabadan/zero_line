@@ -10,12 +10,11 @@
 	<article class="container top_article">
 		<h1>Почему ригиден как никогда процесс стратегического планирования?</h1>
 		<figure  class="fl_left">
-		 	<img src="http://placehold.it/200x140">
+		 	<img src="im/topArtikle.jpg">
 		 	<figcaption>
 				Подпись к картинке
 			</figcaption>
 		</figure>
-
 		<p>Узнаваемость марки, пренебрегая деталями, инновационна. Воздействие на потребителя, не меняя концепции, изложенной выше, создает сегмент рынка, оптимизируя бюджеты. Повышение жизненных стандартов, согласно Ф.Котлеру, амбивалентно.</p>
 		<p>Принцип восприятия поддерживает поведенческий таргетинг, полагаясь на инсайдерскую информацию.
 		Согласно предыдущему, рыночная ситуация требовальна к креативу. <a href="#"><span>Осведомленность о бренде</span></a> допускает комплексный медийный канал, оптимизируя бюджеты. Узнавание бренда тормозит потребительский медийный канал, используя опыт.</p>
@@ -40,7 +39,7 @@
 		<div class="memberListArticles">
 			<h4>Лирический поток сознан </h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article1.jpg">
 			 	<figcaption>
 					Первое полустишие, чтобы уловить хореический ритм или аллитерацию на "л"
 				</figcaption>
@@ -50,7 +49,7 @@
 		<div class="memberListArticles">
 			<h4>Актуальная национальная</h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article2.jpg">
 			 	<figcaption>
 					Речевой акт отражает прозаический замысел, именно
 				</figcaption>
@@ -60,7 +59,7 @@
 		<div class="memberListArticles">
 			<h4>Метафора</h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article3.jpg">
 			 	<figcaption>
 					Вопрос о популярности произведений того или иного автора относится к сфере культурологии, однако синхрония изящно отражает акцент
 				</figcaption>
@@ -70,7 +69,7 @@
 		<div class="memberListArticles">
 			<h4>Возможно денотативное</h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article4.jpg">
 			 	<figcaption>
 					Первое полустишие, чтобы уловить хореический ритм или аллитерацию на "л", однородно диссонирует конкретный верлибр
 				</figcaption>
@@ -80,7 +79,7 @@
 		<div class="memberListArticles">
 			<h4>Актуальная национальная</h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article1.jpg">
 			 	<figcaption>
 					Речевой акт отражает прозаический замысел, именно
 				</figcaption>
@@ -90,7 +89,7 @@
 		<div class="memberListArticles">
 			<h4>Метафора</h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article2.jpg">
 			 	<figcaption>
 					Вопрос о популярности произведений того или иного автора относится к сфере культурологии, однако синхрония изящно отражает акцент
 				</figcaption>
@@ -100,7 +99,7 @@
 		<div class="memberListArticles">
 			<h4>Возможно денотативное</h4>
  			<figure>
-			 	<img src="http://placehold.it/200x120">
+			 	<img src="im/article3.jpg">
 			 	<figcaption>
 					Первое полустишие, чтобы уловить хореический ритм или аллитерацию на "л", однородно диссонирует конкретный верлибр
 				</figcaption>
@@ -109,14 +108,14 @@
 	</div>
 	<!-- end memberListArticles -->
 	<hr>
+
 	<!-- begin search -->
-	<form>
-		<div class="search">
-			<img src="im/search_normal.png" alt="">
-			<input type="text" class="hiddenSearch" placeholder="Search">
-		</div>
-	</form>
+	<div class="search">
+		<input id="search" type="checkbox">
+		<label for="search"><input type="text" class="hiddenSearch" placeholder="Search"></label>
+	</div>
 	<!-- end search -->
+
 	<hr>
 	<!-- begin rigistration -->
 	<div class="rigistration">
@@ -128,18 +127,16 @@
 	        <input type="email" class="form-field" id="eMail" placeholder="test@test.ru" required>
 
 			<label for="info" class="user">Немного информации:</label>
-	        <textarea rows="10" cols="45"  name="info" id="info" placeholder="test@test.ru"></textarea>
+	        <textarea rows="6" cols="45"  name="info" id="info" placeholder="test@test.ru"></textarea>
 			
 			<!-- begin radiobut -->
-			<div class="radiobut">
-				<input type="radio" class="radio" name="male" id="man">
-				<label for="man">Мужчина</label>
-
-				<input type="radio" class="custom-chb" name="male" id="wuman">
-				<label for="wuman">Женщина</label>
-
-				<input type="radio" class="custom-chb" name="male" id="ather">
-				<label for="ather">Другое</label>
+			<div class="radio">
+				<input id="male" type="radio" name="gender" value="male">
+				<label for="male">Мужчина</label>
+				<input id="female" type="radio" name="gender" value="female">
+				<label for="female">Женщина</label>
+				<input id="other" type="radio" name="gender" value="other" checked="checked">
+				<label for="other">Другое</label>
 			</div>
 			<!-- end radiobut -->
 

@@ -1,13 +1,10 @@
-.border {
-	border: 1px solid black;
-}
-
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0; }
+	padding: 0;
+}
 
 body {
 	margin: 20px;
@@ -28,7 +25,7 @@ hr {
 
 h1 {
 	font-family:Arial, sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
@@ -40,7 +37,7 @@ h3 {
 
 h4 {
   @font-face {
-    font-family: PT Sans;
+   	font-family: PT Sans;
     src: url(fonts/PTS55F.ttf);
    }
   font-size: 15px;
@@ -59,22 +56,26 @@ h4 {
 	& figure {
 	width: 200px;
 	margin-right: 10px;
-	& img {
-			border-radius: 3px;
-	}
-}
-	& figcaption {
-			background-color: #efefef;
-			font-size: 11px;
-			padding: 10px 7px;
-			margin-top: -7px;
+		& img {
 			border-radius: 3px;
 		}
+	}
+	& figcaption {
+		background-color: #efefef;
+		font-size: 12px;
+		padding: 10px 7px;
+		margin-top: -7px;
+		border-radius: 3px;
+		}
+}
+@mixin planeFont {
+	font-size: 12px;
+	font-family: Arial;
+	line-height: 1.5;
 }
 
 p {
-	font-size: 12px;
-	line-height: 18px;
+	@include planeFont;
 	a {
 		text-decoration: underline;
 		color: #c2dffc;
@@ -89,6 +90,8 @@ p {
 }
 
 .menu{
+	@include planeFont;
+	letter-spacing: .2px;
 	display:inline-block;
 }
 .menu>a {
@@ -101,7 +104,7 @@ p {
 
 /*---------------icon---------------*/
 [class*='icon'] {
-    height: 16px;
+    height: 14px;
     display: block;
     background: url("../im/icons.png") left 0 no-repeat;
     padding-left: 23px;
@@ -153,35 +156,105 @@ p {
 	vertical-align: text-top;
 	width: 200px;
 	margin: 0 30px 20px 0;
-/*	border: 1px solid black;
-*/	& figcaption {
+	& figcaption {
 		  font-size: 12px;
 		  font-family: "Arial";
 		  text-align: left;
 	}
 }
 
+/*----------color placeholder--------------*/
+::-webkit-input-placeholder {color:#6c6c6c;}
+::-moz-placeholder          {color:#6c6c6c;}
+:-moz-placeholder           {color:#6c6c6c;}
+:-ms-input-placeholder      {color:#6c6c6c;}
+
 /*----------search-------------*/
 .hiddenSearch {
 	width: 238px;
 	height: 40px;
 	border: 2px solid #4693b6;
-	background: url("../im/search_hidden.png") left 0 no-repeat;
-	padding-left: 45px;
+	border-left: 0;
     font-size: 20px;
     font-family: "Arial";
-    line-height: 1.2;
-        margin-top: -5px;
+    padding-left: 5px;
+    position: absolute;
+    -webkit-transition: left .4s;
+    -moz-transition: left .4s;
+    -o-transition: left .4s;
+    transition: left .4s;
+    left: -238px;
+    z-index:1;
     &:focus {
     	outline: none;
     }
-
 }
 
-::-webkit-input-placeholder {color:#6c6c6c;} /* Chrome, Safari */
-::-moz-placeholder          {color:#6c6c6c;} /* Firefox 19+ */
-:-moz-placeholder           {color:#6c6c6c;} /* Firefox 18- */
-:-ms-input-placeholder      {color:#6c6c6c;} /* IE */
+.checkbox {
+	margin: 20px 0;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+.search label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 40px;
+	width: 300px;
+	height: 60px;
+	overflow-x: hidden;
+}
+
+.search label:before {
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	z-index:2;
+	background: url("../im/search_normal.png") left 0 no-repeat;
+}
+
+input[type=checkbox]:checked + label:before {
+    animation: loupe .5s;
+    background: url("../im/search_hidden.png") left 0 no-repeat;
+}
+
+input[type=checkbox]:not(:checked) + label:before {
+    animation: loupe .5s;
+    animation: reversloupe .5s;
+    background: url("../im/search_normal.png") left 0 no-repeat;
+}
+
+@keyframes loupe {
+	from {
+		background: url("../im/search_normal.png") left 0 no-repeat;
+	}
+	to {
+		background: url("../im/search_hidden.png") left 0 no-repeat;
+	}
+}
+
+@keyframes reversloupe {
+	from {
+		background: url("../im/search_hidden.png") left 0 no-repeat;
+	}
+	to {
+		background: url("../im/search_normal.png") left 0 no-repeat;
+	}
+}
+
+input[type=checkbox]:checked + label{
+	& .hiddenSearch {left: 40px;}
+}
+
+input[type=checkbox]:not(:checked) + label{
+   & .hiddenSearch {left: -238px;}
+}
 
 /*-------------form---------------*/
 
@@ -211,9 +284,16 @@ label {
 
 textarea{
 	@include border_input;
-	@extend label;
+	font-size: 13px;
+    font-family: "Arial";
+    color: #909090;
+    display: block;
 	color: black;
+	line-height: 2;
+	resize: vertical;
 }
+
+/*-------------------submit-------------------*/
 
 submit {
   border-style: solid;
@@ -226,22 +306,13 @@ submit {
   width: 124px;
   height: 33px;
 }
-
-
-
-.radiobut {
-	margin: 15px 0;
-}
-
-.custom-chb, .custom-chb + label {
+.custom-chb{
 	display: inline-block;
 }
 .custom-chb + label {
 	padding: 2px 15px 0 0;
 	color: #444444;
 }
-
-
 
 .custom-btn {
   border-width: 2px solid rgb(187, 226, 244);
@@ -260,53 +331,64 @@ submit {
   }
 }
 
-
 /*---------------radio--------------*/
 
 .radio {
-	vertical-align: top;
-	width: 17px;
-	height: 17px;
-	margin: 0 3px 0 0;
+	margin: 20px 0;
 }
-.radio + label {
+
+.radio>label {
+	display: inline-block;
 	cursor: pointer;
-}
-.radio:not(checked) {
-	position: absolute;
-	opacity: 0;
-}
-.radio:not(checked) + label {
 	position: relative;
-	padding: 0 0 0 35px;
+	padding-left: 25px;
+	margin-right: 15px;
+	font-size: 14px;
+	line-height: 2px;
+	color: rgba(68, 68, 68, .5);
+	&:hover {
+		color: rgba(68, 68, 68, .8);
+	}
 }
-.radio:not(checked) + label:before {
-	content: '';
+
+.radio label:before {
+	content: "\2022";
+	color: #fff;
+    font-size: 22px;
+    text-align: center;
+    line-height: 13px;
+
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-right: 10px;
 	position: absolute;
-	top: -3px;
 	left: 0;
-	width: 22px;
-	height: 22px;
-	border: 1px solid #CDD1DA;
-	border-radius: 50%;
-	background: #FFF;
+	bottom: 1px;
+	background-color: #fff;
+	box-shadow: inset  0px 0px 1px 2px #8ee4f6;
+	border-radius: 8px;
 }
-.radio:not(checked) + label:after {
-	content: '';
-	position: absolute;
-	top: 1px;
-	left: 4px;
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	background: #9FD468;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
-	opacity: 0;
-	transition: all .2s;
+
+input[type=radio] {
+	display: none;
 }
-.radio:checked + label:after {
-	opacity: 1;
+
+input[type=radio]:hover + label:before {
+    color: #bbe2f4;
+    &:checked {
+    	color: #65c8e7;
+    }
 }
-.radio:focus + label:before {
-	box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #65c8e7;
+    font-size: 22px;
+    text-align: center;
+    line-height: 13px;
+}
+
+input[type=radio]:checked + label {
+    color: #444;
 }

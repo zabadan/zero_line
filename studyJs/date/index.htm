@@ -4,35 +4,21 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/date.js"></script>
+	<link rel="stylesheet" href="css/date.css">
 
 </head>
 <body>
 <!-- begin miniCalendar -->
 <div class="miniCalendar">
-	<table class='tableCalend' border="1"></table>
+	<div class="arrow-right my-span"></div>
+	<div class="my-span"><table class='tableCalend' border="1"></table></div>
+	<div class="arrow-left my-span"></div>
 </div>
 <!-- end miniCalendar -->
 	<script>
-		var today = new Date();
-		var miniCal = new Array();
-
-		function printDate(date, numDay) {
-			numDay = numDay || 3;
-
-			miniCal.push(today.getDate());
-			for (var i = 1; i <= numDay - 1; i++) {
-				today.setDate(today.getDate() + 1);
-				miniCal.push(today.getDate());
-			};
-
-			$('.tableCalend').append('<tr>');
-			miniCal.forEach(function(item) {
-					$('.tableCalend').append('<td>' + item +'</td>');
-				});
-			$('.tableCalend').append('</tr>');
-		};
-
-		printDate(today,5);
+	var today = new Date();
+		_.printDate(today, 5);
 	</script>
 </body>
 </html>
