@@ -92,26 +92,6 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
    Helper classes
    ========================================================================== */
 
@@ -278,3 +258,23 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|Noto+Serif:400,400italic,700&subset=latin,cyrillic-ext);
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+body {
+   font-family: 'Noto Serif',  'Times New Roman', Times, serif;
+
+}
+
+h1 {
+    font-family: 'PT Sans',  Arial, Helvetica, sans-serif;
+    color: #af1717;
+    font-variant: small-caps;
+}
+

@@ -1,0 +1,48 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+@misin mySerif {
+  font-family: 'Noto Serif',  'Times New Roman', Times, serif;
+  font-size: 14px;
+  line-height: 18px; }
+body {
+  margin: 20px; }
+
+hr {
+  margin: 20px 0;
+  width: 80%; }
+
+.fl_left {
+  float: left; }
+
+.container {
+  width: 600px; }
+
+h1, h3 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+h3 {
+  font-size: 14px; }
+
+h4 {
+  font-size: 15px;
+  font-family: "PT Sans";
+  color: #0076d1;
+  font-weight: bold;
+  line-height: 1.067;
+  text-align: left;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+@font-face {
+  h4 {
+    font-family: PT Sans;
+    src: url(fonts/PTS55F.ttf); } }

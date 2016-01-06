@@ -1,0 +1,247 @@
+
+footer {
+	position: fixed;
+	width: 100%;
+	height: 177px;
+	bottom: 0;
+	margin: 0 -5% 0 -5%;
+	box-shadow: 0 -5px 20px rgba(255,255,255,1);
+	background-color: $secondColor;
+}
+
+.lines {
+	margin: 35px auto;
+	width: 90%;
+	border-top: 1px solid $mainColor;
+	border-bottom: 1px solid $mainColor;
+	& > .coll {
+		margin: -25px auto 0;
+		background-color: $secondColor;
+		width: 250px;
+		@include mySans;
+		font-size: 1.6em;
+		color: $mainColor;
+		font-variant: small-caps;
+		letter-spacing: 5px;
+		text-transform: lowercase;
+		text-align: center;
+	}
+}
+
+.sosial {
+	display: flex;
+	justify-content: center;
+	& li {
+		padding-top: 5px;
+		align-items: center;
+		flex-direction: column;
+		margin: 5px 5px 15px;
+		&:nth-child(3) {
+			@extend h4;
+			font-size: 1.2em;
+			font-weight: 700;
+			margin-top: 10px;
+		}
+	}
+}
+
+nav {
+	text-align: center;
+	& li {
+		display: inline;
+		margin: 0 10px;
+	}
+}
+
+/*---------------menu---------------*/
+
+nav .menuDots {
+  @include mySerif;
+  font-style: italic;
+  color: $menuColorText;
+  line-height: 60px;
+  position: absolute;
+  right: 20px;
+  bottom: -75px;
+  width: 100%;
+  text-align: center;
+  height: 143px;
+  z-index: 0;
+  overflow: hidden;
+}
+nav .menuDots li {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding: 0 16px;
+    
+}
+nav .menuDots li span {
+  display: block;
+
+}
+
+.is_current {
+  	cursor: default;
+  	background-color: $mainColor;
+  	color: $secondColor;
+  	height: 70px;
+ }
+nav .menuDots li i {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #F85931;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: -24px;
+  z-index: -1;
+  -webkit-animation: rubberBandReverse 0.4s ease-in forwards;
+  animation: rubberBandReverse 0.4s ease-in  forwards;
+}
+nav .menuDots li::before, nav .menuDots li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: #F85931;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+nav .menuDots li::before {
+  top: -24px;
+}
+nav .menuDots li::after {
+  bottom: -24px;
+}
+nav .menuDots li:hover i {
+  -webkit-animation: rubberBand 0.4s ease-out both;
+  animation: rubberBand 0.4s ease-out both;
+}
+nav .menuDots .square {
+  position: absolute;
+  background-color: #F85931;
+  top: 60px;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+nav .menuDots .square::before {
+  content: none;
+}
+nav .menuDots li:nth-child(1) i, nav .menuDots li:nth-child(1)::before, nav .menuDots li:nth-child(1)::after {
+  background-color: $menuColor1;
+}
+nav .menuDots li:nth-child(2) i, nav .menuDots li:nth-child(2)::before, nav .menuDots li:nth-child(2)::after {
+  background-color: $menuColor2;
+}
+nav .menuDots li:nth-child(3) i, nav .menuDots li:nth-child(3)::before, nav .menuDots li:nth-child(3)::after {
+  background-color: $menuColor3;
+}
+nav .menuDots li:nth-child(4) i, nav .menuDots li:nth-child(4)::before, nav .menuDots li:nth-child(4)::after {
+  background-color: $menuColor4;
+}
+nav .menuDots li:nth-child(5) i, nav .menuDots li:nth-child(5)::before, nav .menuDots li:nth-child(5)::after {
+  background-color: $menuColor5;
+}
+
+
+@-webkit-keyframes rubberBand {
+  0% {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    -webkit-transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
+  }
+  50% {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    -webkit-transform: scale(0.5, 1.5) translateY(-41px);
+    transform: scale(0.5, 1.5) translateY(-41px);
+  }
+  100% {
+    width: 100%;
+    height: 2px;
+    border-radius: 0;
+    -webkit-transform: scale(1, 1) translateY(-82px);
+    transform: scale(1, 1) translateY(-82px);
+  }
+}
+@-webkit-keyframes rubberBandReverse {
+  100% {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    -webkit-transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
+  }
+  50% {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    -webkit-transform: scale(0.5, 1.5) translateY(-41px);
+    transform: scale(0.5, 1.5) translateY(-41px);
+  }
+  0% {
+    width: 100%;
+    height: 2px;
+    border-radius: 0;
+    -webkit-transform: scale(1, 1) translateY(-82px);
+    transform: scale(1, 1) translateY(-82px);
+  }
+}
+@keyframes rubberBand {
+  0% {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    -webkit-transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
+  }
+  50% {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    -webkit-transform: scale(0.5, 1.5) translateY(-41px);
+    transform: scale(0.5, 1.5) translateY(-41px);
+  }
+  100% {
+    width: 100%;
+    height: 2px;
+    border-radius: 0;
+    -webkit-transform: scale(1, 1) translateY(-82px);
+    transform: scale(1, 1) translateY(-82px);
+  }
+}
+@keyframes rubberBandReverse {
+  100% {
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    -webkit-transform: scale(1, 1) translateY(0);
+    transform: scale(1, 1) translateY(0);
+  }
+  50% {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    -webkit-transform: scale(0.5, 1.5) translateY(-41px);
+    transform: scale(0.5, 1.5) translateY(-41px);
+  }
+  0% {
+    width: 100%;
+    height: 2px;
+    border-radius: 0;
+    -webkit-transform: scale(1, 1) translateY(-82px);
+    transform: scale(1, 1) translateY(-82px);
+  }
+}
