@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Перенатальный психолог-консультант Репенко Ирина</title>
+        <title>Перинатальный психолог-консультант Репенко Ирина</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="stylesheets/app.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -24,7 +25,7 @@
 
         <header class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <h1>Перенатальный психолог-консультант <strong>репенко ирина</strong></h1>
+                <h1>Перинатальный психолог-консультант <strong>репенко ирина</strong></h1>
             </div>
         </header>
         
@@ -33,20 +34,17 @@
             <!-- begin slideshow -->
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <div class="slideshow">
+                    
 
 
-                    <div class="slider" id="main-slider"><!-- outermost container element -->
+                    <div class="slider"><!-- outermost container element -->
                         <div class="slider-wrapper"><!-- innermost wrapper element -->
-                            <div class="slide" data-image="http://lorempixel.com/1024/400/animals">
-                                <p class="slide-caption visible">Caption 1</p>
-                            </div><!-- slides -->
-                            <div class="slide" data-image="http://lorempixel.com/1024/400/business">
-                                <p class="slide-caption">Caption 2</p>
-                            </div>
-                            <div class="slide" data-image="http://lorempixel.com/1024/400/city">
-                                <p class="slide-caption">Caption 3</p>
-                            </div>
+                            <div class="slide" data-image="img/iRepenko_b1.jpg"></div>
+                            <div class="slide" data-image="img/iRepenko_b2.jpg"></div>
+                            <div class="slide" data-image="img/iRepenko_b3.jpg"></div>
+                            <div class="slide" data-image="img/iRepenko_b4.jpg"></div>
+                            <div class="slide" data-image="img/iRepenko_b5.jpg"></div>
+                            <div class="slide" data-image="img/iRepenko_b6.jpg"></div>
                         </div>
                         <div class="slider-nav"><!-- "Previous" and "Next" actions -->
                             <button class="slider-previous">Previous</button>
@@ -57,7 +55,7 @@
 
 
 
-                    </div>
+                    
                 </div>
             </div>
             <!-- end slideshow -->
@@ -177,118 +175,7 @@
         </script>
 
         <script>
-        (function() {
-    
-    function Slideshow( element, callback ) {
-        this.callback = callback || function() {};
-        this.el = document.querySelector( element );
-        this.init();
-    }
-    
-    Slideshow.prototype = {
-        init: function() {
-            this.wrapper = this.el.querySelector( ".slider-wrapper" );
-            this.slides = this.el.querySelectorAll( ".slide" );
-            this.previous = this.el.querySelector( ".slider-previous" );
-            this.next = this.el.querySelector( ".slider-next" );
-            this.nav = this.el.querySelector( ".slider-nav" );
-            this.index = 0;
-            this.total = this.slides.length;
-            
-            this.setup();
-            this.actions(); 
-        },
-        _slideTo: function( slide ) {
-            var currentSlide = this.slides[slide];
-            currentSlide.style.opacity = 1;
-            
-            for( var i = 0; i < this.slides.length; i++ ) {
-                var slide = this.slides[i];
-                if( slide !== currentSlide ) {
-                    slide.style.opacity = 0;
-                }
-            }
-            
-            this.callback( currentSlide );
-        },
-        setup: function() {
-            var slides = this.slides,
-                len = slides.length,
-                i;
-            for( i = 0; i < len; ++i ) {
-                var slide = slides[i],
-                    src = slide.getAttribute( "data-image" );
-                
-                    slide.style.backgroundImage = "url(" + src + ")";
-            }   
-        },
-        actions: function() {
-            var self = this;
-            
-            self.el.addEventListener( "mouseover", function() {
-                self.nav.style.display = "block";
-                
-            }, false);
-            
-            self.el.addEventListener( "mouseout", function() {
-                self.nav.style.display = "none";
-                
-            }, false);
-            
-            self.next.addEventListener( "click", function() {
-                self.index++;
-                self.previous.style.display = "block";
-                
-                if( self.index == self.total - 1 ) {
-                    self.index = self.total - 1;
-                    self.next.style.display = "none";
-                }
-                
-                self._slideTo( self.index );
-                
-            }, false);
-            
-            self.previous.addEventListener( "click", function() {
-                self.index--;
-                self.next.style.display = "block";
-                
-                if( self.index == 0 ) {
-                    self.index = 0;
-                    self.previous.style.display = "none";
-                }
-                
-                self._slideTo( self.index );
-                
-            }, false);
-            
-        }
-        
-        
-    };
-    
-    document.addEventListener( "DOMContentLoaded", function() {
-        
-        var slider = new Slideshow( "#main-slider", function( slide ) {
-            var wrapper = slide.parentNode;
-            var allSlides = wrapper.querySelectorAll( ".slide" );
-            var caption = slide.querySelector( ".slide-caption" );
-            caption.classList.add( "visible" );
-            
-            for( var i = 0; i < allSlides.length; ++i ) {
-                var sld = allSlides[i];
-                var cpt = sld.querySelector( ".slide-caption" );
-              if( sld !== slide ) {
-                cpt.classList.remove( "visible" );
-              }
-            }   
-            
-            
-        });
-        
-    });
-    
-    
-})();
+
 </script>
 
 

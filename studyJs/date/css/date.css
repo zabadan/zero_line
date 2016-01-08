@@ -13,13 +13,13 @@ DIV {
 }
 
 .arrow-right {
-  border-right-color: black;  
-  border-left: 0;
+  border-left-color: black;  
+  border-right: 0;
   margin-top: 20px;
   }
 
 .arrow-left {
-  border-left-color: black;  
-  border-right: 0;
+  border-right-color: black;  
+  border-left: 0;
   margin-top: 20px;
   }

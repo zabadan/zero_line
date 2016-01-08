@@ -136,6 +136,15 @@ nav .menuDots .square {
 nav .menuDots .square::before {
   content: none;
 }
+
+
+@for $i from 1 through 5 {
+	$currentColor: menuColor#{$i};
+	nav .menuDots li:nth-child(#{$i}) i, nav .menuDots li:nth-child(#{$i})::before, nav .menuDots li:nth-child(#{$i})::after {
+  background-color: $currentColor;
+	}
+
+
 nav .menuDots li:nth-child(1) i, nav .menuDots li:nth-child(1)::before, nav .menuDots li:nth-child(1)::after {
   background-color: $menuColor1;
 }
