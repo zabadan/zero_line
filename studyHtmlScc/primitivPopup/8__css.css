@@ -39,18 +39,16 @@ a[href*='google.com.ua'] {
     border-radius: 5px 100px 5px 500px;
     margin: 5px;
 }
+
 .lernDisplay2:hover {
     box-shadow: 0 0 50px #eee;
 }
 
-
-
-.close {
+.jsClose {
     width: 10%;
     position: absolute;
     top: 2px;
     right: 2px;
-
 }
 
 .let_menu {
@@ -76,6 +74,7 @@ a[href*='google.com.ua'] {
     border: 2px solid;
     box-shadow: 0 0 5px #eee;
     padding: 5px;
+    transition: all 1s;
 /*============ sposob 1===========*/
 /*    position: fixed;
     top: 50%;
@@ -97,11 +96,28 @@ a[href*='google.com.ua'] {
     transform: translate(-50%, -50%);
 
 /*============ sposob 4===========*/
-    display: flex;
-/*    align-items: center;*/
-    justify-content: center;
+ /*   display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.massage {
+    width: 300px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: 0 0 5px #eee;
+    padding: 5px;
+    position: fixed;
+    right: 20px;
+    display: block;
 }
 
 .first_p {
     padding-top: 320px;
+}
+
+.jsAddText {
+    font-weight: bold;
+    margin-top: 15px;
 }

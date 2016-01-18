@@ -18,19 +18,17 @@ body {
 
 @mixin mySerif {
   font-family: 'Noto Serif', 'Times New Roman', Times, serif;
-  font-size: 1em;
   line-height: 2em;
 }
 
 @mixin mySans {
   font-family: 'PT Sans',  Arial, Helvetica, sans-serif;
-  font-size: 1em;
   line-height: 1.5em;
 }
 
 .slider {
   margin: 0.67em auto;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   position: relative;
   height: 400px;
@@ -43,7 +41,7 @@ body {
 }
 
 .slide {
-  float: left;
+  //float: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -55,8 +53,7 @@ body {
 
 .slide-caption {
   position: absolute;
-  width: 30%;
-  width: 80%;
+  width: 100%;
   padding: 1em;
   background: rgba( 255, 255, 255, 0.7 );
   color: #000;
@@ -100,7 +97,6 @@ body {
   cursor: pointer;
   text-indent: -9999em;
   color: $mainColor;
-  content: "<";
 }
 
 .slider-nav button:focus {
@@ -109,15 +105,16 @@ body {
 
 .slider-nav button.slider-previous {
   float: left;
-  //display: none;
-  margin-left: 1em;
+  background-image: url(../img/sliderPrevios.png);
+  background-color: $secondColor;
+  //margin-left: 1em;
 
 }
 
 .slider-nav button.slider-next {
   float: right;
-  background-image: url('data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjM4NTJGMDMzOUNDMTFFNDg4ODNGQTA5MzIxODc0RTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjM4NTJGMDQzOUNDMTFFNDg4ODNGQTA5MzIxODc0RTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMzg1MkYwMTM5Q0MxMUU0ODg4M0ZBMDkzMjE4NzRFNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMzg1MkYwMjM5Q0MxMUU0ODg4M0ZBMDkzMjE4NzRFNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjHhc1UAAANtSURBVHja7FvPaxpBFDZZEXFBhBRZrYSeexEkB0HxIKRKMakuRLN68J/IradSeuqx5x5yEMFApJdCe1YUGgOlp1L645BoCQ2IhyD+YDtPqmx0dzVxZ3a3OwODMCF+7/ucmffezJsNURRtVm6bNos3OwkQnucDLpcrNB6P/f1+/2Gv1/NfX18HOp2OH/7u8/naW1tbF263u+10Oi8Zhmnf3Nycn56eXuC2bQPXEhAEITQYDJ6dnZ09vbq6eoCIP7rL/yMhfnm93j87OzvvHQ7Hu3K5fG54ATKZDIeIPm82m0/Qp+OupNXEQH0QDoc/os9X1Wr1t2ZGgwDr9t3dXfve3t5rZNxP+EqcHTAACzC1sH3tL8hms0do7X7DTXy+AyZg6yYAAn/McdxnEr+62mwAG8AWogIUCoUsy7Lf9SI+38EWsImIAOl0+qWev7rabADbsAoQjUbLRiQvFQFsxCKA0cnfVwRTT3stlsNKG56ZyEtFWGVjXOrqjLTb38c7LHORqgKAjzUr+WkHDmocFdPhXC531O123WZPd4EDcLlTLgBxtpbhbSQSEWu1mliv18VUKiXqETYr5Q6yAkCyoaUBjUZDnLbRaCTm83niIgCnlQRA7oPTetdvtVqitOkhwj/XyC0VIJlMvtEaHKY9kJ4XQRAEoiIAt6UCeDyerzjAkU/WXQTgpirA4eFhCGfQoyQCwiW2DICjogA8z7/AbYTeIgBHRQG2t7c/kTBCSQTkr7FjA0dZATKZTIBkzK+XCMARuC4IgAzaJ+2blURA8Ttu3P2FUBguLUiHqaVSyVYsFgF7NsYwzGQciYANV8p1JgDc2OgRq8uJYLfbJ+MHBwdYMG9xnU6FeDz+Vs+sTW45DIdDEYmgORZwXdgDgsHgB71TVyUREomEpjjAdUEAr9f7xQj5u5wIkElqiQFcl54HWKbRJWDxTXC2BKA4Qa9ZiMjbjo+PJzHAtCExbPl83nZycqI5npTrpuQO/tJI5GEcB/l5rpuSCKxtBPIQEMF4pVLBhnuLK02GaDpMD0TokRg9FKXH4vRihF6N0ctRmQJIM1aGyE19tYJKWiChFjPHYjGBZdkfZj3rANuBw1rF0pYukqJlcrRQkpbK0mJpWi5PH0zQJzP/9aMpyz+bow8nSTyetuTTWbM0y1+P/xVgABaO+MftZPsnAAAAAElFTkSuQmCC');
-  margin-right: 1em;
+  background-image: url(../img/sliderNext.png);
+  background-color: $secondColor;
 }
 
 
@@ -134,7 +131,7 @@ body {
     line-height: 1.6em;
     color: $secondColor;
   }
-  & h2 {
+  & > h3 {
     font-size: 1.5em;
     color: $secondColor;
     text-align: left;
@@ -143,14 +140,32 @@ body {
 
 article{
   margin-bottom: 0.67em;
-  & h2 {
+  & h1 {
     font-size: 2.5em;
+    font-weight: 700;
+    margin-top: 35px;
+  }
+  & h3 {
+    font-size: 2em;
     color: $mainColor;
+    margin-top: 30px;
+  }
+  & h4 {
+    color: $mainColor;
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: left;
   }
   & p {
     @include mySerif;
     font-size: .8em;
     line-height: 1.6em;
     color: $textColor;
+    margin-top: 20px;
+  }
+  & li{
+    list-style-type: circle;
+    margin: 5px 0 0 15px;
+
   }
 }

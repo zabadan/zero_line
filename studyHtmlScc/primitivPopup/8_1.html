@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="8__css.css">
+    <script type="text/javascript" src="js/modal.js"></script>
 </head>
 <body>
-    <div class="popup">Стандартний Lorem Ipsum, використовуваний з XVI ст.
-    <img src="close.png" class="close"></div>
+     <div class="popup">Стандартний Lorem Ipsum, використовуваний з XVI ст.
+    <img src="close.png" class="jsClose"></div> 
+
+    <div class="massage">Вам прийшло нове повідомлення!
+        <img src="close.png" class="jsClose"> 
+        <div class="jsAddText"></div>
+    </div>
+
+    <script>
+        timer.timerModal();
+        timer.muveMassage();
+        timer.timerMassage();
+    </script>
 
     <p>Стандартний Lorem Ipsum, використовуваний з XVI ст.</p>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>

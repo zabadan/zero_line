@@ -5,10 +5,8 @@
 
 	function printDate(date, numDay) {
 		numDay = numDay || 3;
-		//debugger;
-		curentDate = new Date(date.getTime());
 		var nextDate = new Date(date.getTime());
-		var previosDate = new Date(date.getTime() - numDay);
+		var previosDate = new Date(date.getTime());
 		nextDate.setDate(nextDate.getDate() + numDay);
 		previosDate.setDate(previosDate.getDate() - numDay);
 		var miniCal = new Array();

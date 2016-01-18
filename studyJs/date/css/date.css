@@ -2,9 +2,7 @@ DIV {
   height: 0;
   border: 7px solid transparent; 
   cursor: pointer;
-  }
-
-
+}
 
 .my-span {
   float: left;
@@ -16,10 +14,10 @@ DIV {
   border-left-color: black;  
   border-right: 0;
   margin-top: 20px;
-  }
+}
 
 .arrow-left {
   border-right-color: black;  
   border-left: 0;
   margin-top: 20px;
-  }
+}

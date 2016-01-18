@@ -1,5 +1,5 @@
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   @include mySans;
   font-size: 2em;
   color: $mainColor;
@@ -13,13 +13,22 @@ h1, h2, h3, h4, h5, h6 {
 h1{
   font-size: 2em;
   color: $mainColor;
-  & > strong {
-  letter-spacing: 2px;
-  font-variant: normal;
-  text-transform: uppercase;
-  font-size: 25px;
-  font-weight: 700;
-  display: block; }
+  & strong{
+    font-weight: 700;
+  }
+}
+
+h2 {
+    color:  $secondHeaderColor;
+    @include mySerif;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-variant: normal;
+    font-weight: 700;
+    font-style: italic;
+    padding: 0 5%;
+
 }
 
 h3 {
@@ -28,7 +37,7 @@ h3 {
   text-align: left;
 }
 
-.skrol>h1{
+/*.skrol>h1{
   font-size: 2em;
   color: $mainColor;
   & > strong {
@@ -38,6 +47,6 @@ h3 {
   font-size: 25px;
   font-weight: 700;
   display: block; }
-}
+}*/
 
 
