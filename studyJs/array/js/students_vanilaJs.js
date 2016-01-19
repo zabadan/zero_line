@@ -28,6 +28,16 @@ function constrStudent( opt ) {
 }
 
 function printStudents () {
+	function supports_html5_storage() {
+		try {
+		    return 'localStorage' in window && window['localStorage'] !== null; alert(' all right! ');
+			} catch (e) {
+				alert(' not right! ');
+		    	return false;
+		  		}
+		};
+
+
 	var btn = document.querySelector('.btnAdd');
 	btn.addEventListener('click', function() {
 		var newStudent = new constrStudent({

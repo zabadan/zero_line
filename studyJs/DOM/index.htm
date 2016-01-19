@@ -13,6 +13,10 @@
     <button type="button" class="btnIncreaseFontSize">+</button>
 	<button type="button" class="btnreduceFontSize">-</button>
 
+	<div class="placehodler">
+		
+	</div>
+
     <script>
     var element = document.body.childNodes;
     //element.style.backgroundColor = "red";
@@ -29,6 +33,20 @@
 	      	this.style.fontSize = "14px";
 		}
     }
+
+	var el = document.querySelector('.placehodler');
+	var numDiv = 5;
+	for(var i = 1; i < numDiv + 1; i++) {
+		var newDiv = document.createElement( 'div' );
+		newDiv.innerHTML = 'додаемо дів з текстом ' + i + '<br>';
+  		//el.appendChild(newDiv);
+
+  		el.insertAdjacentElement( "afterBegin", newDiv );
+  	}
+
+var num1 = "10",     num2 = "9";
+
+    alert (num1 + num2);
     </script>
 </body>
 </html>
