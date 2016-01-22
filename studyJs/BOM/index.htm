@@ -5,6 +5,21 @@
 	<title>BOM</title>
 </head>
 <body>
-	общение фреймов со страницей
+	<!-- общение фреймов со страницей -->
+	<script>
+		var newWin = window.open(" ", 'example', 'width=600,height=400');
+
+		//alert(newWin.location.href); // (*) about:blank, загрузка ещё не началась
+
+		newWin.onload = function() {
+
+		  // создать div в документе нового окна
+		  var div = newWin.document.createElement('div'),
+		      body = newWin.document.body;
+
+		  div.innerHTML = 'Добро пожаловать!'
+		  div.style.fontSize = '30px'
+		}
+	</script>
 </body>
 </html>

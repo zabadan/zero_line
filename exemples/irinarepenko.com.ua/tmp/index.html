@@ -219,23 +219,12 @@
                         </ul>
                     </article>
                 </div>
+                
             </div>
+
         </section>
 
-<section>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <article>
-                    <a name="coming" class="anchor"></a><h1>Вызов на дом</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vel elit vel ullamcorper. Vestibulum ornare accumsan nisi ut iaculis. Phasellus dignissim at mi id dignissim. Nunc luctus rhoncus purus, quis commodo enim sollicitudin eget. Phasellus ac eros sit amet lacus sagittis consequat. Curabitur scelerisque velit et malesuada egestas. Quisque rhoncus, diam eu posuere placerat, dolor nisi hendrerit velit, at posuere velit dolor consectetur justo. Vivamus eleifend leo ac cursus consequat. Aenean id orci urna. Ut eu odio sit amet eros mollis laoreet lobortis et dolor. Phasellus facilisis vestibulum felis.</p>
-                    <p>Aliquam hendrerit mauris id tincidunt imperdiet. Quisque sagittis augue purus, nec interdum neque cursus id. Morbi in augue in tortor maximus vulputate sed sit amet magna. Aenean rutrum justo laoreet, convallis dolor nec, hendrerit ante. Phasellus euismod rhoncus odio ac suscipit. Morbi sodales erat dui, a sodales tortor tempor gravida. Aenean dictum pharetra quam eu eleifend. Ut at metus id massa aliquam condimentum nec et velit. Vivamus vitae mi rutrum est condimentum varius. Quisque molestie rutrum mauris sed scelerisque. Pellentesque laoreet consectetur turpis quis gravida. Sed a purus mauris. Nullam in mauris sapien. Sed rutrum malesuada ipsum, vitae varius diam. Fusce tincidunt ultrices nunc, non ultrices ligula. Vivamus lorem urna, dapibus non lectus id, efficitur efficitur felis.</p>
-                    <p>Cras a convallis metus. Mauris commodo porta ligula et sodales. Aenean sollicitudin luctus elementum. Suspendisse sodales auctor fringilla. Sed justo tortor, dictum nec mattis eu, fringilla sit amet neque. Integer vehicula ut orci sit amet mollis. Mauris nec ante in eros consequat viverra. Nulla velit purus, faucibus ac nisi non, luctus viverra nisl. Proin venenatis ex id nisi condimentum, ut suscipit odio mattis. Pellentesque a leo orci.</p>
-                    <p>Sed a purus dui. Ut nec metus hendrerit elit accumsan eleifend. Cras dignissim sollicitudin erat vel eleifend. Donec sit amet enim in erat pellentesque varius sit amet congue elit. Vestibulum vulputate, elit nec facilisis faucibus, sapien libero auctor quam, in lobortis sem orci at urna. Integer accumsan ligula id erat laoreet ultrices. Nam quis tellus ac sapien hendrerit pellentesque sed in odio. Morbi non tellus eu nulla viverra placerat. Donec aliquam mi massa, at consectetur ex congue id. Ut malesuada mattis dui. Fusce eget vehicula libero. Mauris posuere dui vitae auctor ornare. Praesent volutpat nulla non luctus interdum.</p>
-                        
-                    </article>
-                </div>
-            </div>
-        </section>
+
 
         <!-- end content -->
 
@@ -255,11 +244,12 @@
                 <!-- end contacts -->
                 <nav>
                     <ul class="menuDots">
-                        <li><a href="#about">Главная<i></i></a></li>
-                        <li><a href="#services">Услуги<i></i></a></li>
-                        <li><a href="#coming">Заказать выезд<i></i></a></li>
-                        <li><a href="#articles">Статьи<i></i></a></li>
-                        <li><a href="#contacts">Контакты<i></i></a></li>
+                        <li><span><a href="#about">Обо мне</a></span><div class="bg-menu transition"></div><i></i></li><!-- class="is_current" -->
+                        <li><span><a href="#services">Услуги</a></span><div class="bg-menu transition"></div><i></i></li>
+                        <!-- <li><span>Тренинг</span><i></i></li> -->
+                        <li><span><a href="#services">Заказать выезд</a></span><div class="bg-menu"></div><i></i></li>
+                        <li><span><a href="#services">Статьи</a></span><div class="bg-menu"></div><i></i></li>
+                        <li><span><a href="#services">Контакты</a></span><div class="bg-menu"></div><i></i></li>
                     </ul>
                 </nav>
         </footer>
@@ -276,30 +266,11 @@
               var scrolY = window.pageYOffset;
               if(scrolY > 0){document.getElementsByClassName("strong")[0].style.display = "inline"}
             }*/
-        //debugger;
-            function activMenu(){
-                var ancherName = '';
-                $('a.anchor[name]').each(function(){
-                    var scroll = $(window).scrollTop()
-                    var pos = $(this).position().top;
-                    var SHIFT = 30;
-                    //console.log('pos = ' + pos + '   scroll = ' + scroll);
-
-                    if (pos <= scroll + SHIFT){
-                        ancherName = $(this).attr('name');
-                    }
-                })
-                $('a[href="#' + ancherName + '"]').each(function(){
-                    var selector = 'nav ul.menuDots>li';
-                    $(selector).removeClass('active');
-                    $(this).parents(selector).addClass('active');
-                });
-            }
-
-            activMenu();
-            $(window).on('scroll', activMenu);
         </script>
 
+        <script>
+
+</script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

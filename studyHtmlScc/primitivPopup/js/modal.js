@@ -39,7 +39,6 @@
 			    currentPosition-=2.5;
 			    elementMassage.style.top = currentPosition +"px";
 			    requestAnimationFrame(anim);
-			    //elementAddText.innerHTML = 'додатковий текст';
 			}
 			var time = setTimeout(function () {elementMassage.style.top = minPositionY + maxPositionY +"px"}, 4000);
 		});
@@ -54,9 +53,17 @@
 		//closeModal();
 	};
 
+	function getJsPopup() {
+	var elementJsPopup = document.querySelector('.jsPopup');
+	alert('offsetWidth = ' + elementJsPopup.offsetWidth);
+
+	}
+
+
 	timer.timerModal = timerModal;
 	timer.muveMassage = muveMassage;
 	timer.timerMassage = timerMassage;
+	timer.getJsPopup = getJsPopup;
 
 	window.timer = timer;
 }());

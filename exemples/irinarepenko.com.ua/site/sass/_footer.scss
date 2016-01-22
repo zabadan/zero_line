@@ -74,15 +74,13 @@ nav .menuDots li {
   position: relative;
   padding: 0 16px;
 }
-nav .menuDots li span {
-  display: block;
-}
-nav .menuDots li span a{
+
+nav .menuDots li a {
   text-decoration: none;
   color: $menuColorText;
   text-shadow: 0px 0px 8px $secondColor;
+  display: block;
 }
-
 
 nav .menuDots li i {
   display: block;
@@ -97,9 +95,6 @@ nav .menuDots li i {
   right: 0;
   bottom: -24px;
   z-index: -1;
-
-/*  -webkit-animation: rubberBandReverse 0.4s ease-in forwards;
-  animation: rubberBandReverse 0.4s ease-in  forwards;*/
 }
 nav .menuDots li::before, nav .menuDots li::after {
   content: '';
@@ -124,41 +119,21 @@ nav .menuDots li:hover i {
   animation: rubberBand 0.4s ease-out both;
 }
 
-nav .menuDots li:active i{
-  -webkit-animation: rubberBandLineReverse 0.4s ease-in  forwards;
-  animation: rubberBandLineReverse 0.4s ease-in  forwards;
-}
-
-/*.is_current {
-    cursor: default;
-    background-color: $mainColor;
-    color: $secondColor;
-    height: 70px;
- }*/
-
-//@for $i from 1 through 5 {
-//	$currentColor: menuColor#{$i};
-//	nav .menuDots li:nth-child(#{$i}) i, nav .menuDots li:nth-child(#{$i})::before, nav .menuDots li:nth-child(#{$i})::after {
-//  background-color: $currentColor;
-//}
-
-
-nav .menuDots li:nth-child(1) i, nav .menuDots li:nth-child(1)::before, nav .menuDots li:nth-child(1)::after {
+nav .menuDots li:nth-child(1) i, nav .menuDots li:nth-child(1)::before, nav .menuDots li:nth-child(1)::after,  nav ul.menuDots li:nth-child(1).active {
   background-color: $menuColor1;
 }
-nav .menuDots li:nth-child(2) i, nav .menuDots li:nth-child(2)::before, nav .menuDots li:nth-child(2)::after {
+nav .menuDots li:nth-child(2) i, nav .menuDots li:nth-child(2)::before, nav .menuDots li:nth-child(2)::after,  nav ul.menuDots li:nth-child(2).active {
   background-color: $menuColor2;
 }
-nav .menuDots li:nth-child(3) i, nav .menuDots li:nth-child(3)::before, nav .menuDots li:nth-child(3)::after {
+nav .menuDots li:nth-child(3) i, nav .menuDots li:nth-child(3)::before, nav .menuDots li:nth-child(3)::after,  nav ul.menuDots li:nth-child(3).active {
   background-color: $menuColor3;
 }
-nav .menuDots li:nth-child(4) i, nav .menuDots li:nth-child(4)::before, nav .menuDots li:nth-child(4)::after {
+nav .menuDots li:nth-child(4) i, nav .menuDots li:nth-child(4)::before, nav .menuDots li:nth-child(4)::after, nav ul.menuDots li:nth-child(4).active {
   background-color: $menuColor4;
 }
-nav .menuDots li:nth-child(5) i, nav .menuDots li:nth-child(5)::before, nav .menuDots li:nth-child(5)::after {
+nav .menuDots li:nth-child(5) i, nav .menuDots li:nth-child(5)::before, nav .menuDots li:nth-child(5)::after,  nav ul.menuDots li:nth-child(5).active {
   background-color: $menuColor5;
 }
-
 
 @-webkit-keyframes rubberBand {
   0% {
@@ -246,6 +221,4 @@ nav .menuDots li:nth-child(5) i, nav .menuDots li:nth-child(5)::before, nav .men
     -webkit-transform: scaleY(2) translateY(-19px);
     transform: scaleY(2) translateY(-19px);
   }
-
-  
 }
