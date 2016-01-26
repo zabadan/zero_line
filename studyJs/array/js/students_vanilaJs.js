@@ -7,7 +7,7 @@ function refresh() {
 	$('table').html(tableCap);
 	students.forEach(function(item, i) {
 		item.id = i+1;
-		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet" >Del</button><button type="button" class="editStudet" id = '+ item.id + '>Edit</button></td></tr>');
+		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet"' + 'date-action = "del_' + item.id + '">Del</button><button type="button" class="editStudet" id = '+ item.id + ' date-action = "edit_' + item.id + '">Edit</button></td></tr>');
 	});
 }
 
@@ -15,7 +15,7 @@ function sortRefresh() {
 	$('table').html('');
 	$('table').html(tableCap);
 	students.forEach(function(item, i) {
-		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet" >Del</button><button type="button" class="editStudet" id = '+ item.id + '>Edit</button></td></tr>');
+		$('.printTableStudents').append('<tr><td>' + item.id +'</td><td>' + item.name +'</td><td>' + item.date + '</td><td>' + item.age + '</td><td>' + item.rating + '</td><td><button type="button" id = '+ item.id + ' class="delStudet"' + ' date-action = "del_' + item.id + '">Del</button><button type="button" class="editStudet" id = '+ item.id + ' date-action = "edit_' + item.id + '">Edit</button></td></tr>');
 	});
 }
 
@@ -56,6 +56,8 @@ function printStudents () {
 	$('.btnRefrech').on('click', function() {
 		refresh();
 	});
+
+	/*function btnDelEdit(element) {}*/
 
 	$('.printTableStudents').on('click', '.delStudet', function() {
 		if (confirm('Are you sureyou remove the student ' + students[event.target.id-1].name + '?')) {

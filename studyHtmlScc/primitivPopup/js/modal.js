@@ -55,7 +55,8 @@
 
 	function getJsPopup() {
 	var elementJsPopup = document.querySelector('.jsPopup');
-	alert('offsetWidth = ' + elementJsPopup.offsetWidth);
+	alert('offsetWidth = ' + elementJsPopup.offsetWidth
+		);
 
 	}
 
